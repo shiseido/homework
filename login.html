@@ -1,0 +1,456 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Login</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Tesla Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href='http://fonts.useso.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/templatemo_style.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easydropdown.js"></script>
+    <script type="text/javascript">
+        (function($) {
+            $('a[data-reveal-id]').live('click',
+                    function(e) {
+                        e.preventDefault();
+                        var modalLocation = $(this).attr('data-reveal-id');
+                        $('#' + modalLocation).reveal($(this).data());
+                    });
+            $.fn.reveal = function(options) {
+
+                var defaults = {
+                    animation: 'fadeAndPop',
+                    //fade, fadeAndPop, none
+                    animationspeed: 300,
+                    //how fast animtions are
+                    closeonbackgroundclick: true,
+                    //if you click background will modal close?
+                    dismissmodalclass: 'close-reveal-modal' //the class of a button or element that will close an open modal
+                };
+                //Extend dem' options
+                var options = $.extend({},
+                        defaults, options);
+                return this.each(function() {
+                    var modal = $(this),
+                            topMeasure = parseInt(modal.css('top')),
+                            topOffset = modal.height() + topMeasure,
+                            locked = false,
+                            modalBG = $('.reveal-modal-bg');
+                    if (modalBG.length == 0) {
+                        modalBG = $('').insertAfter(modal);
+                    }
+                    //Entrance Animations
+                    modal.bind('reveal:open',
+                            function() {
+                                modalBG.unbind('click.modalEvent');
+                                $('.' + options.dismissmodalclass).unbind('click.modalEvent');
+                                if (!locked) {
+                                    lockModal();
+                                    if (options.animation == "fadeAndPop") {
+                                        modal.css({
+                                            'top': $(document).scrollTop() - topOffset,
+                                            'opacity': 0,
+                                            'visibility': 'visible'
+                                        });
+                                        modalBG.fadeIn(options.animationspeed / 2);
+                                        modal.delay(options.animationspeed / 2).animate({
+                                                    "top": $(document).scrollTop() + topMeasure + 'px',
+                                                    "opacity": 1
+                                                },
+                                                options.animationspeed, unlockModal());
+                                    }
+                                    if (options.animation == "fade") {
+                                        modal.css({
+                                            'opacity': 0,
+                                            'visibility': 'visible',
+                                            'top': $(document).scrollTop() + topMeasure
+                                        });
+                                        modalBG.fadeIn(options.animationspeed / 2);
+                                        modal.delay(options.animationspeed / 2).animate({
+                                                    "opacity": 1
+                                                },
+                                                options.animationspeed, unlockModal());
+                                    }
+                                    if (options.animation == "none") {
+                                        modal.css({
+                                            'visibility': 'visible',
+                                            'top': $(document).scrollTop() + topMeasure
+                                        });
+                                        modalBG.css({
+                                            "display": "block"
+                                        });
+                                        unlockModal()
+                                    }
+                                }
+                                modal.unbind('reveal:open');
+                            });
+
+                    //Closing Animation
+                    modal.bind('reveal:close',
+                            function() {
+                                if (!locked) {
+                                    lockModal();
+                                    if (options.animation == "fadeAndPop") {
+                                        modalBG.delay(options.animationspeed).fadeOut(options.animationspeed);
+                                        modal.animate({
+                                                    "top": $(document).scrollTop() - topOffset + 'px',
+                                                    "opacity": 0
+                                                },
+                                                options.animationspeed / 2,
+                                                function() {
+                                                    modal.css({
+                                                        'top': topMeasure,
+                                                        'opacity': 1,
+                                                        'visibility': 'hidden'
+                                                    });
+                                                    unlockModal();
+                                                });
+                                    }
+                                    if (options.animation == "fade") {
+                                        modalBG.delay(options.animationspeed).fadeOut(options.animationspeed);
+                                        modal.animate({
+                                                    "opacity": 0
+                                                },
+                                                options.animationspeed,
+                                                function() {
+                                                    modal.css({
+                                                        'opacity': 1,
+                                                        'visibility': 'hidden',
+                                                        'top': topMeasure
+                                                    });
+                                                    unlockModal();
+                                                });
+                                    }
+                                    if (options.animation == "none") {
+                                        modal.css({
+                                            'visibility': 'hidden',
+                                            'top': topMeasure
+                                        });
+                                        modalBG.css({
+                                            'display': 'none'
+                                        });
+                                    }
+                                }
+                                modal.unbind('reveal:close');
+                            });
+
+                    //Open Modal Immediately
+                    modal.trigger('reveal:open');
+
+                    //Close Modal Listeners
+                    var closeButton = $('.' + options.dismissmodalclass).bind('click.modalEvent',
+                            function() {
+                                modal.trigger('reveal:close')
+                            });
+
+                    if (options.closeonbackgroundclick) {
+                        modalBG.css({
+                            "cursor": "pointer"
+                        });
+                        modalBG.bind('click.modalEvent',
+                                function() {
+                                    modal.trigger('reveal:close')
+                                });
+                    }
+                    $('body').keyup(function(e) {
+                        if (e.which === 27) {
+                            modal.trigger('reveal:close');
+                        } // 27 is the keycode for the Escape key
+                    });
+
+                    function unlockModal() {
+                        locked = false;
+                    }
+                    function lockModal() {
+                        locked = true;
+                    }
+
+                }); //each call
+            } ;//orbit plugin call
+        })(jQuery);
+        var regName=/^[a-z0-9_-]{3,16}$/;
+        var regPwd=/^[a-z0-9_-]{6,18}$/;
+        var regMail=/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+
+        $(document).ready(function() {
+            $('#input1').blur(function () {
+                if (regName.test($('#input1').val())) {
+                    /*$('#p1').css('visibility','');*/
+                    $('#warn1').css('visibility', 'hidden');
+                } else {
+                    $('#warn1').css('visibility', 'visible');
+                }
+            });
+            $('#input1').focus(function(){
+            });
+            $('#input2').blur(function () {
+                if (regPwd.test($('#input2').val())) {
+                    /*$('#p1').css('visibility','');*/
+                    $('#warn2').css('visibility', 'hidden');
+                } else {
+                    $('#warn2').css('visibility', 'visible');
+                }
+            });
+            $('#input2').focus(function(){
+            });
+            $('#input3').blur(function () {
+                if (($('#input3').val()==($('#input2').val()))) {
+                    /*$('#p1').css('visibility','');*/
+                    $('#warn3').css('visibility', 'hidden');
+                } else {
+                    $('#warn3').css('visibility', 'visible');
+                }
+            });
+            $('#input3').focus(function(){
+            });
+            $('#input4').blur(function () {
+                if (regMail.test($('#input4').val())) {
+                    /*$('#p1').css('visibility','');*/
+                    $('#warn4').css('visibility', 'hidden');
+                } else {
+                    $('#warn4').css('visibility', 'visible');
+                }
+            });
+            $('#input4').focus(function(){
+            });
+
+        });
+    </script>
+    <style type="text/css">
+        .warn{
+            visibility: hidden;
+        }
+        .big-link { display: block;  text-align: center;  height: 36%;width: 202%;color:#cdcdcd;font-size: 1em;margin-top: 5% }
+        .reveal-modal {
+            visibility: hidden;
+            top: -3%;
+            left: 50%;
+            margin-left: -50%;
+            width: 200%;
+            background: #eee  no-repeat ;
+            position: absolute;
+            z-index: 101;
+            padding: 10% 3% 10% ;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            -moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+            -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+            -box-shadow: 0 0 10px rgba(0,0,0,.4);
+            height: 100%;
+
+        }
+        .reveal-modal .close-reveal-modal {
+            font-size: 1.5em;
+            line-height: normal;
+            position: absolute;
+            top: 1%;
+            right: 1%;
+            color: #aaa;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="templatemo-bg-gray">
+<!-- header -->
+
+<div class="banner1">
+    <div class="container">
+        <div class="header-bottom">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" class="img-responsive" alt="" /></a>
+            </div>
+            <div class="head-nav">
+                <span class="menu"> </span>
+                <ul class="cl-effect-15">
+                    <li ><a href="order.html">立即订购</a></li>
+                    <li><a href="index.html" data-hover="邀约试驾">邀约试驾</a></li>
+                    <li><a href="gallery.html" data-hover="相册">相册</a></li>
+                    <li><a href="videos.html" data-hover="视频">视频</a></li>
+                    <li><a href="404.html" data-hover="官方资讯">官方资讯</a></li>
+                    <li ><a href="shop.html" data-hover="特斯拉商城">特斯拉商城</a></li>
+                    <li class="active"><a href="login.html" data-hover="注册">注册</a></li>
+
+                </ul>
+                <!--<div class="clearfix"></div>-->
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <!-- script-for-nav -->
+        <script>
+            $( "span.menu" ).click(function() {
+                $( ".head-nav ul" ).slideToggle(300, function() {
+                    // Animation complete.
+                });
+            });
+        </script>
+        <!-- script-for-nav -->
+    </div>
+</div>
+<!-- header -->
+<div class="order-section-page">
+    <div class="ordering-form">
+        <div class="container">
+            <div class="order-form-head text-center wow bounceInLeft" data-wow-delay="0.4s">
+                <!--<h3>汽车订购单</h3>-->
+                <!--<p>订购从未变得如此简单 </p>-->
+            </div>
+            <div class="col-md-6 order-form-grids">
+
+                <div class="order-form-grid  wow fadeInLeft" data-wow-delay="0.4s">
+                    <h5>新用户注册</h5>
+                    <span>请输入用户名</span>
+                    <div class="dropdown-button">
+                        <!--<select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>-->
+                            <!--<option value="0">个人订购</option>-->
+                            <!--<option value="1">企业订购</option>-->
+                            <!--<option value="2">军方订购</option>-->
+                        <!--</select>-->
+                        <input id="input1" type="text" placeholder="请输入3到16为用户名" style="height: 40%;width: 100%;line-height: 200%;"/>
+                        <p id="warn1" class="warn" style="color: red;font-weight: bold;font-size: 20px">!请正确输入3到16为用户名</p>
+                    </div>
+                    <span>请输入密码</span>
+                    <div class="dropdown-button wow">
+                        <!--<select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>-->
+                            <!--<option value="0">上海市浦东新区蓝天路518号</option>-->
+                            <!--<option value="1">上海市闵行区中春路9969号</option>-->
+                            <!--<option value="2">上海市卢湾区马当路230号</option>-->
+                        <!--</select>-->
+                        <input id="input2" class="input1" type="password" placeholder="请输入6到18为用户名" style="height: 40%;width: 100%;line-height: 200%;"/>
+                        <p id="warn2" class="warn" style="color: red;font-weight: bold;font-size: 20px">!请正确输入密码</p>
+
+                    </div>
+                    <span>确认密码</span>
+                    <div class="dropdown-button">
+                        <!--<select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>-->
+                            <!--<option value="0">最远里程</option>-->
+                            <!--<option value="1">最优性能</option>-->
+                        <!--</select>-->
+                        <input id="input3" class="input1" type="password" placeholder="请再次输入密码" style="height: 40%;width: 100%;line-height: 200%;"/>
+                        <p id="warn3" class="warn" style="color: red;font-weight: bold;font-size: 20px">！密码输入不一致</p>
+
+                    </div>
+                    <span >请输入邮箱</span>
+                    <div class="dropdown-button">
+                        <!--<select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>-->
+                            <!--<option value="0">Model S</option>-->
+                            <!--<option value="1">Model X</option>-->
+                            <!--<option value="2">Model 3</option>-->
+                        <!--</select>-->
+                        <input id="input4" class="input1" type="email" placeholder="请输入邮箱地址" style="height: 40%;width: 100%;line-height: 200%;"/>
+                        <p id="warn4" class="warn" style="color: red;font-weight: bold;font-size: 20px">！请正确输入邮箱地址</p>
+
+                    </div>
+                    <!--<input type="text" class="text" value="Time" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Time';}"><br>-->
+                    <span >请输入出生日期</span>
+                    <div class="dropdown-button">
+                    <input type="date"  style="height: 40%;width: 100%;line-height: 200%;"/>
+                    </div>
+                    <div class="wow swing animated" data-wow-delay= "0.4s">
+                        <input type="button" value="创建" style="width:40%;height: 120%;margin-left: 0;margin-top: 8%">
+
+                    </div>
+                    <a href="#" class="big-link" data-reveal-id="myModal" style="width:40%;height: 120%;margin-left: 0;margin-top: 1%;"> 已有帐号？立即登录 </a>
+                    <div id="myModal" class="reveal-modal" style="background-color: rgb(70,81,100)">
+                        <!--<body class="templatemo-bg-gray">-->
+                        <body class="templatemo-bg-gray">
+                        <div class="container" style="width: 100%;height: 100%;margin: 2% auto">
+
+                            <div class="col-md-12">
+                                <h1 class="margin-bottom-15" style="margin: 0 auto">用户登录</h1>
+                                <form class="form-horizontal templatemo-container templatemo-login-form-1 margin-bottom-30" role="form" action="index.html" method="post">
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <div class="control-wrapper">
+                                                <label for="username" class="control-label fa-label"><i class="fa fa-user fa-medium"></i></label>
+                                                <input type="text" class="form-control" id="username" placeholder="Username">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <div class="control-wrapper">
+                                                <label for="password" class="control-label fa-label"><i class="fa fa-lock fa-medium"></i></label>
+                                                <input type="password" class="form-control" id="password" placeholder="Password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <div class="checkbox control-wrapper">
+                                                <label>
+                                                    <input type="checkbox"> 记住我
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <div class="control-wrapper">
+
+                                                <input type="submit" value="登入" class="btn btn-info">
+
+                                                <a href="#" class="text-right pull-right">忘记密码?</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <label>使用合作账号登录: </label>
+                                            <div class="inline-block">
+                                                <a href="#"><i class="fa fa-facebook-square login-with"></i></a>
+                                                <a href="#"><i class="fa fa-twitter-square login-with"></i></a>
+                                                <a href="#"><i class="fa fa-google-plus-square login-with"></i></a>
+                                                <a href="#"><i class="fa fa-tumblr-square login-with"></i></a>
+                                                <a href="#"><i class="fa fa-github-square login-with"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                                <div class="text-center">
+                                    <a href="login.html" class="templatemo-create-new">新建账号 <i class="fa fa-arrow-circle-o-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        </body>
+                        <a class="close-reveal-modal">×</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 ordering-image wow bounceIn" data-wow-delay="0.4s">
+                <img src="images/teslalogo2.jpg" class="img-responsive" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <a href="index.html"><img src="images/foot.png" class="img-responsive" alt="" style="margin: 0 auto"/></a>
+        <p>
+            <a href="http://www.miibeian.gov.cn" target="_blank" style="margin-left: 1%;font-size: 1em">沪ICP备14038430号-1</a>
+            <a href="" style="margin-left: 1%;font-size: 1em">Tesla Motors &copy; 2016</a>
+            <a href="" style="margin-left: 1%;font-size: 1em">法律信息</a>
+            <a href="" style="margin-left:1%;font-size: 1em">联系我们</a>
+            <a href="" style="margin-left: 1%;font-size: 1em">工作机会</a>
+            <a href="" style="margin-left: 1%;font-size: 1em"> <img src="images/chinese-flag.png" alt="" style="vertical-align: sub;margin-right: 10px"/>中国</a>
+        </p>
+    </div>
+</div>
+<!-- footer -->
+</body>
+</html>
