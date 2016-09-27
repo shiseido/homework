@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+
+
+.divtop {
+    width: 100%;
+    height: 28px;
+    border-bottom: 1px solid #CDCDCD;
+    background-color: #F2F2F2;
+}
+
+.divtitle {
+    width: 960px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 auto;
+    padding: 0 4px;
+}
+
+.divtitle a {
+    color: #333;
+}
+
+.divbody {
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.divb1 {
+    height: 85px;
+    width: 960px;
+}
+
+.divb1 div {
+    float: left;
+}
+
+.logo {
+    width: 290px;
+    height: 75px;
+    margin-top: 6px;
+}
+
+input[type=checkbox] {
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.wx {
+    width: 140px;
+    height: 50px;
+    border-right: 1px solid #CDCDCD;
+    text-align: center;
+    margin-top: 19px;
+}
+
+.qq {
+    width: 140px;
+    height: 50px;
+    border-right: 1px solid #CDCDCD;
+    text-align: center;
+    margin-top: 19px;
+}
+
+.divb1 p {
+    color: #999;
+    margin-top: 3px;
+}
+
+.login {
+    width: 296px;
+    height: 50px;
+    margin-left: 19px;
+    margin-top: 20px;
+}
+
+.reset_password {
+    width: 57px;
+    height: 28px;
+    margin-left: 14px;
+}
+
+.reg {
+    width: 57px;
+    height: 28px;
+    margin-left: 14px;
+}
+
+input[type=password] {
+    margin-left: 38px;
+}
+
+.login1 {
+    color: #369;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+.register {
+    line-height: 31px;
+    color: #444 font : 14 px;
+!important;
+    font-weight: bold;
+}
+
+.divb2 {
+    width: 960px;
+    height: 33px;
+    background: #2B7ACD
+}
+
+.div1 {
+    width: 86px;
+    height: 33px;
+    float: left;
+    line-height: 33px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+;
+}
+
+.div1 a {
+    color: white;
+}
+
+.div1:hover {
+    background-color: blue;
+
+}
+
+.div2 {
+    width: 86px;
+    height: 33px;
+    float: left;
+    line-height: 33px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+;
+}
+
+.div2 a {
+    color: orange;
+
+}
+
+.div2:hover {
+    background-color: blue;
+    text-decoration: underline;
+}
+
+.div3 {
+    width: 100px;
+    height: 33px;
+    float: left;
+    line-height: 33px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+;
+}
+
+.div3 a {
+    color: white;
+}
+
+.div3:hover {
+    background-color: blue;
+}
+
+.div4 {
+    width: 86px;
+    height: 33px;
+    float: left;
+    line-height: 33px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+;
+}
+
+.div4 a {
+    color: white;
+}
+
+.div4:hover {
+    background-color: blue;
+}
+
+.div5 {
+    width: 72px;
+    height: 33px;
+    float: left;
+    line-height: 33px;
+    font-size: 14px !important;
+    font-weight: 700;
+    text-align: center;
+;
+}
+
+.div5 a {
+    color: red;
+}
+
+.div5:hover {
+    background-color: blue;
+    text-decoration: underline;
+}
+
+.div6 {
+    width: 86px;
+    height: 33px;
+    float: left;
+    line-height: 33px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+;
+}
+
+.div6 a {
+    color: white;
+}
+
+.div6:hover {
+    background-color: blue;
+}
+
+.div7 {
+    width: 86px;
+    height: 33px;
+    float: left;
+    line-height: 33px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+;
+}
+
+.div7 a {
+    color: white;
+}
+
+.div7:hover {
+    background-color: blue;
+}
+
+.div8 {
+    width: 114px;
+    height: 24px;
+
+    float: right;
+    line-height: 24px;
+    font-size: 14px !important;
+    font-weight: 700;
+    text-align: center;
+    display: inline;
+    background-color: white;
+    margin: 4px 6px;
+
+}
+
+.div8 a {
+    color: #369;
+}
+
+.div8:hover {
+    background-color: blue;
+}
+
+
+.list1 {
+    border-bottom: 1px solid #E5EDF2;
+    line-height: 16px;
+}
+#hidden{
+    display: none;
+    position: relative;
+    z-index: 1;
+}
+
+.se {
+    display: inline;
+    margin-left: 6px;
+    position: relative;
+    top: -10px;
+}
+
+span {
+    color: #999
+}
+
+.span2{
+    font-weight: bold;
+}
+.tr:visited .form1{
+    background-color: red;
+}
+table tr td{
+    height: 18px;
+    width: 88px;
+    line-height: 18px;
+}
+table tr td a{
+    color: #333;
+}
+
+.nav:hover  a{
+    border-color: #C2D5E3;
+}
+.nav:visited a{
+    background-color: #E8EFF5;
+    font-weight: bold;
+}
+.li1{
+    font-size: 12px;
+    color: #444;
+    font-weight: 600;
+    border-bottom: 1px solid #CDCDCD;
+    background-color: #E5EDF2;
+}
+.li1:hover{
+    background-color: #E5EDF2;
+
+}

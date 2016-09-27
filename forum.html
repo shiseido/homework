@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/forum.css"/>
+    <script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#div2').on({
+                'mouseover':function(){
+                    $(this).find('ul').css('display','block')
+                },
+                'mouseleave':function(){
+                    $(this).find('ul').css('display','none')
+                }
+            });
+            $('#div5').on({
+                'mouseover':function(){
+                    $(this).find('ul').css('display','block')
+                },
+                'mouseleave':function(){
+                    $(this).find('ul').css('display','none')
+                }
+            });
+            $('#div6').on({
+                'mouseover':function(){
+                    $(this).find('ul').css('display','block')
+                },
+                'mouseleave':function(){
+                    $(this).find('ul').css('display','none')
+                }
+            });
+            $('#div8').on({
+                'mouseover':function(){
+                    $('#hidden').css('display','block')
+                },
+                'mouseleave':function(){
+                    $('#hidden').css('display','none')
+                }
+            });
+        });
+        var moveDiv=function(){
+            var div2=document.getElementById("scroll1");
+            if(document.body.scrollTop>3926){
+                div2.style.position='absolute';
+                div2.style.top='3916px';
+
+            }else if(document.body.scrollTop>344){
+
+                div2.style.position='fixed';
+                div2.style.top='22px';
+            }
+            else{
+                div2.style.position='absolute';
+                div2.style.top='344px';
+            }
+       /*     var div4=document.getElementById("scroll2");
+            if(115<document.body.scrollTop){
+                div4.style.position='fixed';
+                div4.style.top=0;
+            }else{
+                div4.style.position='absolute';
+                div4.style.top='115px';
+            }*/
+            var div3=document.getElementById("scroll2");
+            if(document.body.scrollTop>4766){
+                div3.style.position='absolute';
+                div3.style.top='4746px';
+            }else if(document.body.scrollTop>4096){
+
+                div3.style.position='fixed';
+                div3.style.top='20px';
+            }
+            else{
+                div3.style.position='absolute';
+                div3.style.top='4096px';
+            }
+            var div4=document.getElementById("divb2");
+            if(116<document.body.scrollTop){
+                div4.style.position='fixed';
+                div4.style.top=0;
+            }else{
+                div4.style.position='';
+                div4.style.top='116px';
+            }
+        }
+    </script>
+</head>
+<body onscroll="moveDiv()">
+<a name="top"></a>
+<div class="divtop">
+    <div class="divtitle"><a href="">设为首页</a> <a href="">收藏本站</a></div>
+</div>
+<div class="divbody">
+    <div class="divb1">
+        <div class="logo"><img src="image/discuz.png" alt="loading"/></div>
+        <div class="wx"><img src="image/wechat.png" alt=""/>
+
+            <p>扫一扫，访问微社区</p>
+        </div>
+        <div class="qq"><img src="image/qq.png" alt=""/>
+
+            <p>只需一步，快速开始</p>
+        </div>
+        <div class="login" style="border-right: 1px solid#CDCDCD">
+            <div style="margin-top: 2px"><label style="cursor: pointer">
+                用户名 <a href=""><img src="image/button.png"></a> <input type="text" name="name" size="20"
+                                                                       style="height: 20px"/>
+                <input type="checkbox" name="radio" value="button1" height="23" style="cursor: pointer"/>自动登录</label>
+            </div>
+            <div style="margin-top: 4px">
+                密码 <input type="password" name="password" size="20" style="height: 20px"/>
+                <button type="submit"
+                        style="width: 75px;height:23px;background-color: #E5E5E5;vertical-align: middle;border: 1px solid #999;cursor: pointer">
+                    <b>登录</b></button>
+            </div>
+        </div>
+        <div class="reset_password" style="float: right;margin-top: 26px">
+            <a style="cursor: pointer">找回密码</a>
+        </div>
+        <div class="reg" style="float: right;margin-top: 1px;color: #369">
+            <a style="cursor: pointer"><b>立即注册</b></a>
+        </div>
+    </div>
+    <div class="divb2" id="divb2">
+        <div class="div1" style="font-size: 14px"><a href="">论坛首页</a></div>
+        <div class="div2" id="div2" style="font-size: 14px"><a href="">文档资料</a>
+            <ul style="position: absolute;z-index: 9;display: none;height: 33px;width: 126px;list-style-type: none;text-align:inherit;">
+                <a href="" style=""><li class="li1">教程</li></a>
+                <a href=""><li class="li1">资料库</li></a>
+                <a href=""> <li class="li1">开发文档</li></a>
+            </ul>
+        </div>
+        <div class="div3"><a href="" style="font-size: 14px">腾讯云主机</a></div>
+        <div class="div4"><a href="" style="font-size: 14px">服务购买</a></div>
+        <div class="div5" id="div5"><a href="" style="font-size: 14px">微社区</a>
+            <ul style="position: absolute;z-index: 9;display: none;height: 33px;width: 126px;list-style-type: none;text-align:inherit;">
+                <a href="" style=""><li class="li1">Discuz!打通版</li></a>
+                <a href=""><li class="li1">标准版</li></a>
+                <a href=""> <li class="li1">本地化部署版</li></a>
+            </ul>
+        </div>
+        <div class="div6" id="div6"><a href="" style="font-size: 14px">应用中心</a>
+            <ul style="position: absolute;z-index: 9;display: none;height: 33px;width: 126px;list-style-type: none;text-align:inherit;">
+                <a href="" style=""><li class="li1">Discuz!应用中心</li></a>
+                <a href=""><li class="li1">Discuz！开放平台</li></a>
+            </ul>
+        </div>
+        <div class="div7"><a href="" style="font-size: 14px">在线体验</a></div>
+        <div class="div8" id="div8" ><a href="" style="font-size: 14px">快捷导航<img src="image/button2.png" alt="loading"/></a>
+            <div id="hidden" style="float: right;width: 620px;height: 88px;border: 1px solid #CDCDCD;background-color: white;border-top: none;">
+                <p style="text-align: center;margin-top: 30px"> 请<a href="" style="color:#369;">登录</a>后使用快捷导航</p>
+                <p style="text-align: center;">没有帐号?<a href="" style="color:#369;">立即注册</a></p>
+            </div>
+        </div>
+    </div>
+    <div style="height: 45px;width: 960px;background-color:#E8EFF5;">
+        <input type="text" name="text" style="height: 22px;width: 226px;margin-left: 21px;margin-top: 10px "
+               placeholder="请输入搜索内容"/>
+        <select name="webs" id="webs" style="height: 22px;width: 61px;margin-left: 0">
+            <option value="tiezi">帖子</option>
+            <option value="xiangche">相册</option>
+            <option value="yonghu">用户</option>
+        </select>
+
+        <div style="height: 45px;width: 632px ;float: right">
+            <img src="image/search.png" alt="" style="margin-top: 10px"/>
+
+            <div class="se" style="color: black">热搜：</div>
+            <div class="se">网页游戏</div>
+            <div class="se">婚纱</div>
+            <div class="se">推广</div>
+            <div class="se">聊天室</div>
+            <div class="se">游戏</div>
+            <div class="se">婚纱摄影</div>
+            <div class="se">积分商城</div>
+            <div class="se">搬家</div>
+            <div class="se">同城交友</div>
+            <div class="se">客户端</div>
+            <div class="se">旅游</div>
+            <div class="se">招聘</div>
+        </div>
+    </div>
+    <div style="height: 29px;width: 960px"><a href=""> <img src="image/webpage.png" alt=""/></a>
+        <a href=""
+           style="margin: 0;padding: 0;color: #333;line-height: 29px;vertical-align: middle;position: relative;bottom: 10px">>论坛首页</a>
+        <a href=""
+           style="margin: 0;padding: 0;color: #333;line-height: 29px;vertical-align: middle;position: relative;bottom: 10px">>Discuz!
+            交流与讨论</a>
+        <a href=""
+           style="margin: 0;padding: 0;color: #333;line-height: 29px;vertical-align: middle;position: relative;bottom: 10px">>Discuz!
+            插件</a>
+        <a href=""
+           style="margin: 0;padding: 0;color: #333;line-height: 29px;vertical-align: middle;position: relative;bottom: 10px">>Discuz
+            原生手机APP,完全免费！</a>
+    </div>
+  <!--  <div style="width: 960px;height: 33px;margin-bottom: 10px">
+    </div>-->
+    <div style="width: 563px;height: 33px;float: left;display: inline">
+        <img src="image/fatie.png" alt=""/>
+    </div>
+    <div style="height: 33px">
+        <div style="width: 397px;height: 28px;float: right;display: inline-block;margin-top: 5px;line-height: 33px">
+            <a href="" style="float: left;display: inline-block" class="nav1"> <img src="image/fanhuiliebiao.png"
+                                                                                    alt=""/></a>
+
+            <div style="height: 26px;width: 24px;border: 1px solid #CDCDCD;float: left;display: inline-block;margin-left: 4px;line-height: 26px;text-align: center"
+                 class="nav2">
+                <a href="" style="font-weight: 400;color: #333;">1</a>
+            </div>
+            <div style="height: 26px;width: 24px;border: 1px solid #CDCDCD;float: left;display: inline-block;margin-left: 4px;line-height: 26px;text-align: center"
+                 class="nav3">
+                <a href="" style="font-weight: 400;color: #333;">2</a>
+            </div>
+            <div style="height: 26px;width: 24px;border: 1px solid #CDCDCD;float: left;display: inline-block;margin-left: 4px;line-height: 26px;text-align: center"
+                 class="nav4">
+                <a href="" style="font-weight: 400;color: #333;">3</a>
+            </div>
+            <div style="height: 26px;width: 24px;border: 1px solid #CDCDCD;float: left;display: inline-block;margin-left: 4px;line-height: 26px;text-align: center"
+                 class="nav5">
+                <a href="" style="font-weight: 400;color: #333;">4</a>
+            </div>
+            <div style="height: 26px;width: 24px;border: 1px solid #CDCDCD;float: left;display: inline-block;margin-left: 4px;line-height: 26px;text-align: center"
+                 class="nav5">
+                <a href="" style="font-weight: 400;color: #333;">5</a>
+            </div>
+            <div style="height: 26px;width: 79px;border: 1px solid #CDCDCD;float: left;display: inline-block;margin-left: 4px;line-height: 26px;text-align: center">
+                <div style="height: 16px;width: 25px;border: 1px solid #CDCDCD;line-height: 16px;margin: 4px 6px;text-align: left;float: left;display: inline">
+                    1
+                </div>
+                <span style="float: right;display: inline;width: 25px;height: 16px;margin: 1px 6px"> /5页</span>
+            </div>
+            <div style="height: 28px;width: 73px;float: right;display: inline-block;margin-left: 4px;" class="nav6">
+                <a href="" style="font-weight: 400;color: #333;">
+                    <img src="image/xiayiye.png" alt=""/>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div style="width: 960px;height: 6158px;border: 1px solid #CDCDCD;margin-top: 10px">
+        <div style="width: 160px;height: 6158px;display: inline-block;float: left;border-right: 1px solid #C2D5E3;background-color: #E5EDF2;">
+            <div style="height: 36px;width: 160px;border-bottom: 3px solid #C2D5E3">
+                <p style="color: #999;line-height: 23px;text-align: center;padding-top: 7px"> 查看:
+                    <span style="color: #F26C4F"> 9816</span>
+                    <span style="margin-left: 4px;margin-right: 4px">|</span>回复:
+                    <span style="color:#F26C4F;"> 45</span>
+                </p>
+            </div>
+            <div style="height: 36px;width: 160px;border-bottom: 1px dashed #CDCDCD;">
+                <a href=""
+                   style="font-weight: 700;color: #333;padding: 11px;display: block;font-size: 13px">2115658219</a>
+            </div>
+            <div id="scroll1" style="width: 160px;height: 123px">
+                <img src="image/think.jpg" alt="" style="margin-top: 10px;margin-left: 15px;position: absolute"/>
+            </div>
+            <div style="height: 3677px;width: 160px;"></div>
+            <div style="height: 36px;width: 160px;border-bottom: 3px solid #C2D5E3;"></div>
+            <div style="height: 36px;width: 160px;border-bottom: 1px dashed #CDCDCD;">
+                <a href=""
+                   style="font-weight: 700;color: #333;padding: 11px;display: block;font-size: 13px">2115658219</a>
+            </div>
+            <div  style="width: 160px;height: 794px;border-bottom: 3px solid #C2D5E3">
+                <img id="scroll2" src="image/think.jpg" alt="" style="margin-top: 10px;margin-left: 15px;position: absolute"/>
+            </div>
+            <div style="height: 36px;width: 160px;border-bottom: 1px dashed #CDCDCD;">
+                <a href=""
+                   style="font-weight: 700;color: #333;padding: 11px;display: block;font-size: 13px">2115658219</a>
+            </div>
+            <div style="width: 160px;height: 195px;border-bottom: 3px solid #C2D5E3">
+                <img src="image/think.jpg" alt="" style="margin-top: 10px;margin-left: 15px;position: absolute"/>
+            </div>
+            <div style="height: 36px;width: 160px;border-bottom: 1px dashed #CDCDCD;">
+                <a href=""
+                   style="font-weight: 700;color: #333;padding: 11px;display: block;font-size: 13px">2115658219</a>
+            </div>
+            <div style="width: 160px;height: 195px;border-bottom: 3px solid #C2D5E3">
+                <img src="image/think.jpg" alt="" style="margin-top: 10px;margin-left: 15px;position: absolute"/>
+            </div>
+            <div style="height: 36px;width: 160px;border-bottom: 1px dashed #CDCDCD;">
+                <a href=""
+                   style="font-weight: 700;color: #333;padding: 11px;display: block;font-size: 13px">2115658219</a>
+            </div>
+            <div style="width: 160px;height: 195px;border-bottom: 3px solid #C2D5E3">
+                <img src="image/think.jpg" alt="" style="margin-top: 10px;margin-left: 15px;position: absolute"/>
+            </div>
+            <div style="height: 36px;width: 160px;border-bottom: 1px dashed #CDCDCD;">
+                <a href=""
+                   style="font-weight: 700;color: #333;padding: 11px;display: block;font-size: 13px">2115658219</a>
+            </div>
+            <div style="width: 160px;height: 195px;border-bottom: 3px solid #C2D5E3">
+                <img src="image/think.jpg" alt="" style="margin-top: 10px;margin-left: 15px;position: absolute"/>
+            </div>
+            <div style="height: 36px;width: 160px;border-bottom: 1px dashed #CDCDCD;">
+                <a href=""
+                   style="font-weight: 700;color: #333;padding: 11px;display: block;font-size: 13px">2115658219</a>
+            </div>
+            <div style="width: 160px;height: 195px;border-bottom: 3px solid #C2D5E3">
+                <img src="image/think.jpg" alt="" style="margin-top: 10px;margin-left: 15px;position: absolute"/>
+            </div>
+            <div style="height: 36px;width: 160px;border-bottom: 1px dashed #CDCDCD;">
+                <a href=""
+                   style="font-weight: 700;color: #333;padding: 11px;display: block;font-size: 13px">2115658219</a>
+            </div>
+            <div style="width: 160px;height: 195px;border-bottom: 3px solid #C2D5E3">
+                <img src="image/think.jpg" alt="" style="margin-top: 10px;margin-left: 15px;position: absolute"/>
+            </div>
+        </div>
+        <!--华丽的分割线-->
+        <div style="width: 798px;height: 6158px;display: inline-block;float: right;">
+            <div style="height: 36px;width: 800px;float: right;display: inline-block;border-bottom: 3px solid #C2D5E3">
+                <p style="font-size: 16px;color: #333;font-weight: 700;line-height: 21px;margin-top: 8px;margin-left: 15px">
+                    <a href="" style="font-size: 16px;color: #333">[商业]</a>
+                    Discuz 原生手机APP,完全免费！
+                    <a href="" style="font-size: 12px;color: #999">[复制链接]</a>
+                        <span style="margin-left: 352px">
+                            <img src="image/printer.png" alt=""/>
+                            <img src="image/left.png" alt=""/>
+                            <img src="image/right.png" alt=""/>
+                        </span>
+                </p>
+            </div>
+            <div style="height: 36px;width: 757px;border-bottom: 1px dashed #CDCDCD;margin-right:20px;float: right;display: inline-block;">
+                <p style="line-height: 14px;margin-top: 10px">
+                    <img src="image/people.gif" alt="" style="vertical-align: middle"/> 发表于 2015-10-22 18:22:24
+                    <span style="margin-left: 8px;color: #999">|</span>
+                    <a href="" style="color: #333;margin-left: 8px">只看该作者</a>
+                    <span style="margin-left: 8px;color: #999">|</span>
+                    <a href="" style="color: #333;margin-left: 8px">只看大图</a>
+                        <span style="font-weight: bold;color: red;margin-left: 256px;height: 28px;width: 38px;"
+                              class="lift">
+                            <a href="" style="color: red;">楼主</a></span>
+                    <a href="" style="color: #333;margin-left: 6px" class="lift2">电梯直达</a>
+                    <input type="text" style="height: 14px;width: 37px"/>
+                    <img src="image/lift.png" alt="" style="vertical-align: sub"/>
+                </p>
+            </div>
+            <div style="height: 3450px;width: 757px;display: inline-block;float: right">
+                <p style="text-align: center;color: #999;line-height: 32px;margin-right: 20px">本帖最后由 2115658219 于
+                    2015-12-23 11:46 编辑</p>
+
+                <p style="font-size: 14px;text-indent: 2em;margin-right: 20px;line-height: 21px">
+                    从PC时代到移动互联网时代的变化过程中，人们对手机的依赖逐渐增强导致站长面临大量用户流失的困境。
+                    行想科技一方面专注于为传统互联网社交网站和门户网站提供技术支持与信息服务，另一方面也精心渗透到用户生活需求的点点滴滴，
+                    为用户提供更多有价值的产品和体验。这次推出的新型论坛移动应用X-think1.0结合市场需求能够有效地帮助站长建立自己的营销生态圈，
+                    打造属于站长自己的移动APP，它重新整合了BBS用户资源从根本上解决论坛老用户需求。</p>
+
+                <p><img src="image/picture1.jpg" alt=""/></p>
+
+                <p style="color: red;font-weight: 700;font-size: 14px;line-height: 21px">适用于IOS，Android两大系统</p>
+
+                <p style="font-size: 14px;text-indent: 2em;margin-right: 20px;line-height: 21px">
+                    原生APP没有跨平台兼容的能力，所以针对不同系统的手机都要完全重新开发原生应用，例如安卓平台需要开发一次，IOS平台需要开发一次，
+                    针对这些不同的机型我们开展了相应的开发工作，从而进一步确保了APP的质量和高标准的用户体验。</p>
+
+                <p style="color: red;font-weight: 700;font-size: 14px;line-height: 21px;margin-top: 30px">技术特色</p>
+
+                <p style="font-weight: 700;font-size: 14px;line-height: 21px">（一）采用原生技术开发</p>
+
+                <p style="font-size: 14px;text-indent: 2em;line-height: 21px;margin-right: 20px;">
+                    目前仍然有一些做Discuz手机应用化的公司选择了HTML5技术开发，这样做不外乎缩减了开发周期，同时大大降低了开发成本。
+                    但也以牺牲用户体验为代价，毕竟HTML5技术还不够成熟，并且存在一定的弊端。HTML5技术无法对硬件底层的功能进行调用，所以限制了HTML5技术的应用，
+                    这将导致需要系统底层来支持的功能无法通过HTML5技术来实现。X-think1.0采用原生技术开发，可访问手机所有功能(GPS、摄像头)，速度更快、性能高、整体用户体验不错。</p>
+
+                <p style="font-weight: 700;font-size: 14px;line-height: 21px">（二）独立开发Discuz插件</p>
+
+                <p style="font-size: 14px;text-indent: 2em;line-height: 21px;margin-right: 20px;">
+                    插件专门由原Discuz员工开发，安装在站长服务器上，App直接通过该插件读取数据呈现内容给用户，不经过我们云端服务器，安全放心。</p>
+
+                <p style="color: red;font-weight: 700;font-size: 14px;line-height: 21px;margin-top: 30px">
+                    增强社交性，用户体验更赞！</p>
+
+                <p style="font-size: 14px;text-indent: 2em;line-height: 21px;margin-right: 20px;">
+                    为了适应手机用户的使用习惯，我们增加图片聊天社交功能和即时聊天功能以丰富传统论坛的不足。</p>
+
+                <p style="margin-top: 30px"><img src="image/pict2.jpg" alt=""/></p>
+
+                <p style="font-size: 14px;line-height: 21px;margin-right: 20px;margin-top: 10px">
+                    第三方接入：用户可将精彩内容一键分享至微博等第三方主流社交平台。支持QQ,，微博第三方账号登录。
+                    手机验证注册：无需繁琐的注册流程采用简单便捷的手机短信注册登录。</p>
+
+                <p style="color: red;font-weight: 700;font-size: 14px;line-height: 21px;margin-top: 30px">
+                    免费生成APP，站长享有云平台合作项目选择权</p>
+
+                <p style="font-size: 14px;line-height: 21px;margin-right: 20px;">
+                    对于站长而言，行想科技提供的X-think1.0与服务，不仅大大缩短了论坛转换时间，而且从申请咨询到生成APP，
+                    再到后期的更新维护，行想实行全程免费。</p>
+
+                <p style="font-size: 14px;line-height: 21px;text-indent: 1em">
+                    云平台的合作项目，站长可根据需要选择性合作（非强制性）。这些合作项目目前包括以下几种:</p>
+
+                <p style="font-size: 14px;line-height: 21px;">跳蚤：分类广告</p>
+
+                <p style="font-size: 14px;line-height: 21px;">理财：智能理财产品分类，理财社交圈</p>
+
+                <p style="font-size: 14px;line-height: 21px;">微店：移动微店，用户可与店主随时互动,买到称心商品</p>
+
+                <p style="font-size: 14px;line-height: 21px;">点评：本地生活消费指南</p>
+
+                <p style="font-size: 14px;line-height: 21px;">广告：广告弹出、植入、APP下载推广、游戏合作……</p>
+
+                <p style="font-size: 14px;line-height: 21px;">外卖：本地快餐配送……</p>
+
+                <p style="color: red;font-weight: 700;font-size: 14px;line-height: 21px;margin-top: 30px">对用户进行大数据分析</p>
+
+                <p style="font-size: 14px;text-indent: 2em;line-height: 21px;margin-right: 20px;">
+                    站长可以对数据进行掌控和分析，为用户体验带来真正的提升，同时获取更多的市场机会探索出大数据价值所对应的商业模式。</p>
+
+                <p><img src="image/picture3.jpg" alt=""/></p>
+
+                <p><img src="image/picture4.jpg" alt=""/></p>
+
+                <p><img src="image/picture5.jpg" alt=""/></p>
+
+                <p style="font-weight: 700;font-size: 14px;text-align: center;width: 592px;display: block;line-height: 21px">
+                    （集成友盟SDK大数据分析）</p>
+
+                <p style="color: red;font-weight: 700;font-size: 14px;line-height: 21px;margin-top: 30px">简单几步便可轻松拥有</p>
+
+                <p style="font-size: 14px;text-indent: 2em;line-height: 21px;margin-right: 20px;">
+                    X-think1.0的操作极其简单，只需简单几步即可获得与源网站同步的手机APP（包括android、iOS），全部Web端的历史内容展现在APP上并且与Web端的内容共享互通。</p>
+
+                <p style="font-size: 14px;font-weight: 700;line-height: 21px">创建流程：</p>
+
+                <p><img src="image/picture6.jpg" alt=""/></p>
+
+                <p style="font-size: 14px;text-indent: 1em;line-height: 21px;margin-right: 20px;">前面两步由站长完成，登录<a href=""
+                                                                                                                 style="color: #369">http://www.xthink.mobi</a>,点击立即创建，填写服务端参数。后续生成APP的工作由我们来完成，1-3天即可。
+                </p>
+
+                <p style="font-size: 14px;text-indent: 1em;line-height: 21px;margin-right: 20px;">
+                    对于用户来说，X-think1.0突破传统论坛局限预示着传统论坛又上升到了一个新的高度。移动互联网将是未来发展的必然趋势，而行想科技势必会全力以赴为站长提供技术支持和信息服务，携手站长一同共创美好未来。</p>
+
+                <p style="color: red;font-weight: 700;font-size: 14px;line-height: 21px;margin-top: 30px">目前版本</p>
+
+                <p style="font-size: 14px;line-height: 21px;font-weight: 700">Xthink 1.0公测版</p>
+
+                <p style="font-size: 14px;line-height: 21px;font-weight: 700">X-think1.0简体UTF-8（支持）</p>
+
+                <p style="font-size: 14px;line-height: 21px;font-weight: 700">X-think1.0简体GBK(正在开发中)</p>
+
+                <p style="font-size: 14px;line-height: 21px;font-weight: 700;margin-top: 60px">了解更多详情请联系我们：</p>
+
+                <p style="font-size: 14px;line-height: 21px;font-weight: 700;">网址: <a href="" style="color: #369">http://www.xthink.mobi</a>
+                </p>
+
+                <p style="font-size: 14px;line-height: 21px;font-weight: 700;">QQ：2115658219</p>
+
+                <p style="font-size: 14px;line-height: 21px;font-weight: 700;">QQ群：487595663</p>
+
+                <p style="font-size: 14px;line-height: 21px;font-weight: 700;">服务邮箱：<a href="" style="color: #369">kefu@xthinkapp.com</a>
+                </p>
+
+                <p><img src="image/picture7.jpg" alt=""/></p>
+            </div>
+            <div style="width: 800px;height: 167px;margin-top: 183px;float: right;display: inline-block;border-bottom: 1px dashed #CDCDCD;">
+                <p style="line-height: 34px;text-align: center">
+                    <span style="font-weight: bold;line-height: 24px;vertical-align: super;margin-right: 6px">分享到:</span>
+                    <img src="image/qq_share.png" alt=""/> <a href=""
+                                                              style="color: #369;vertical-align: super;margin-right: 10px">QQ好友和群</a>
+                    <img src="image/qzone.gif" alt=""/> <a href=""
+                                                           style="color: #369;vertical-align: super;margin-right: 10px">QQ空间</a>
+                    <img src="image/weibo.png" alt=""/> <a href=""
+                                                           style="color: #369;vertical-align: super;margin-right: 10px">腾讯微博</a>
+                    <img src="image/pengyou.png" alt=""/> <a href=""
+                                                             style="color: #369;vertical-align: super;margin-right: 10px">腾讯朋友</a>
+                    <img src="image/share.png" alt=""/> <a href=""
+                                                           style="color: #369;vertical-align: super;margin-right: 10px">微信</a>
+                </p>
+
+                <p style="line-height: 34px;text-align: center">
+                    <a href=""
+                       style="width: 64px;height: 32px;background-color: #E8EFF5;display: inline-block;float: left;color: #333;margin-left: 258px">
+                        <img src="image/fav.gif" style="margin-right: 6px;vertical-align: sub" alt=""/>收藏</a>
+                    <a href=""
+                       style="width: 64px;height: 32px;background-color: #E8EFF5;display: inline-block;float: left;color: #333;margin-left: 10px">
+                        <img src="image/collection.png" style="margin-right: 6px;vertical-align: sub" alt=""/>淘贴</a>
+                    <a href=""
+                       style="width: 64px;height: 32px;background-color: #E8EFF5;display: inline-block;float: left;color: #333;margin-left: 10px">
+                        <img src="image/rec_add.gif" style="margin-right: 6px;vertical-align: sub" alt=""/>顶
+                        <span style="color: #999">13</span>
+                    </a>
+                    <a href=""
+                       style="width: 64px;height: 32px;background-color: #E8EFF5;display: inline-block;float: left;color: #333;margin-left: 10px">
+                        <img src="image/rec_subtract.gif" style="margin-right: 6px;vertical-align: sub" alt=""/>踩</a>
+                </p>
+            </div>
+            <div style="width: 800px;height: 35px;float: right;display: inline-block;border-bottom: 3px solid #C2D5E3;">
+                <p style="line-height: 36px"><a href="" style="color: #333;margin-left: 20px"> <img
+                        src="image/ballon3.png" alt="" style="vertical-align: middle;margin-right: 4px"/>回复</a>
+                        <span style="padding-left: 580px"> <select name="daoju" id="daoju1"
+                                                                   style="border-color: transparent">
+                            <option value="daoju">使用道具</option>
+                            <option value="zhiding"><img src="image/stick.small.gif" alt=""/>置顶卡</option>
+                            <option value="zhiding"><img src="image/open.small.gif" alt=""/>喧嚣卡</option>
+                            <option value="zhiding"><img src="image/highlight.small.gif" alt=""/>变色卡</option>
+                            <option value="zhiding"><img src="image/jack.small.gif" alt=""/>千斤顶</option>
+                            <option value="zhiding"><img src="image/namepost.small.gif" alt=""/>显身卡</option>
+                        </select></span>
+                    <a href="" style="color: #333;margin-left: 10px">举报</a>
+                </p>
+            </div>
+            <div style="height: 36px;width: 757px;border-bottom: 1px dashed #CDCDCD;margin-right:20px;float: right;display: inline-block;">
+                <p style="line-height: 14px;margin-top: 10px">
+                    <img src="image/ico_lz (1).png" alt="" style="vertical-align: middle"/> 发表于 2015-10-22 18:22:24
+                    <span style="margin-left: 8px;color: #999">|</span>
+                    <a href="" style="color: #333;margin-left: 8px">只看该作者</a>
+                        <span style="font-weight: bold;color: red;margin-left: 380px;height: 28px;width: 38px;"
+                              class="lift">
+                            <a href="" style="color: red;">沙发</a></span>
+                </p>
+            </div>
+            <div style="height: 758px;width: 757px;display: inline-block;float: right;border-bottom: 1px dashed #CDCDCD;margin-right: 20px">
+                <p style="text-align: center;color: #999;line-height: 32px;margin-right: 20px">本帖最后由 2115658219
+                    于2015-12-23 11:46 编辑</p>
+
+                <p style="font-size: 14px;line-height: 21px">希望大家多多支持我们!
+                    <img src="image/183756n171b33f4f7ssd43.png.thumb.jpg" alt=""/>
+                </p>
+
+                <div style="width: 100px;height: 100px"></div>
+                <p><img src="image/3.png" alt=""/></p>
+            </div>
+            <div style="width: 800px;height: 35px;float: right;display: inline-block;border-bottom: 3px solid #C2D5E3;">
+                <p style="line-height: 36px"><a href="" style="color: #333;margin-left: 20px">
+                    <img src="image/ballon3.png" alt="" style="vertical-align: middle;margin-right: 4px"/>回复</a>
+                    <img src="image/rec_add.gif" alt="" style="vertical-align: middle;margin-right: 4px"/>支持</a>
+                    <img src="image/rec_subtract.gif" alt="" style="vertical-align: middle;margin-right: 4px"/>反对</a>
+                        <span style="padding-left: 480px"> <select name="daoju" class="daoju"
+                                                                   style="border-color: transparent">
+                            <option value="daoju">使用道具</option>
+                            <option value="zhiding"><img src="image/stick.small.gif" alt=""/>置顶卡</option>
+                            <option value="zhiding"><img src="image/open.small.gif" alt=""/>喧嚣卡</option>
+                            <option value="zhiding"><img src="image/highlight.small.gif" alt=""/>变色卡</option>
+                            <option value="zhiding"><img src="image/jack.small.gif" alt=""/>千斤顶</option>
+                            <option value="zhiding"><img src="image/namepost.small.gif" alt=""/>显身卡</option>
+                        </select></span>
+                    <a href="" style="color: #333;margin-left: 10px">举报</a>
+                </p>
+            </div>
+            <div style="height: 36px;width: 757px;border-bottom: 1px dashed #CDCDCD;margin-right:20px;float: right;display: inline-block;">
+                <p style="line-height: 14px;margin-top: 10px">
+                    <img src="image/ico_lz (1).png" alt="" style="vertical-align: middle"/> 发表于 2015-10-22 18:22:24
+                    <span style="margin-left: 8px;color: #999">|</span>
+                    <a href="" style="color: #333;margin-left: 8px">只看该作者</a>
+                        <span style="margin-left: 380px;height: 28px;width: 38px;"
+                              class="lift">
+                            <a href="" style="color: #333;">板凳</a></span>
+                </p>
+            </div>
+            <div style="height: 159px;width: 757px;margin-right:20px;float: right;display: inline-block;border-bottom: 1px dashed #CDCDCD;">
+                <div style="height: 70px;width: 757px;margin-left: 40px;margin-top: 20px;background-color: #f9f9f9;float: right;display: inline-block">
+                    <img src="image/quote1.png" style="margin-left: 20px" alt=""/>
+
+                    <div style="height: 70px;width: 300px;display: inline-block">
+                        <a href=""
+                           style="line-height: 50px;text-decoration: underline;color: rgb(153,153,153);font-size: 16px;">
+                            选峰工作室 发表于 2015-10-22 19:41</a> <br/> <span
+                            style="font-size: 14px;line-height: 20px;"> 支持一下。</span>
+                    </div>
+                    <img src="image/quote2.png" alt=""/>
+
+                    <p style="font-size: 14px">非常感谢您的支持，希望多多关注我们！ <img src="image/lol.gif" alt=""/></p>
+                </div>
+            </div>
+            <div style="width: 800px;height: 35px;float: right;display: inline-block;border-bottom: 3px solid #C2D5E3;">
+                <p style="line-height: 36px"><a href="" style="color: #333;margin-left: 20px">
+                    <img src="image/ballon3.png" alt="" style="vertical-align: middle;margin-right: 4px"/>回复</a>
+                    <img src="image/rec_add.gif" alt="" style="vertical-align: middle;margin-right: 4px"/>支持</a>
+                    <img src="image/rec_subtract.gif" alt="" style="vertical-align: middle;margin-right: 4px"/>反对</a></p>
+                        <span style="padding-left: 480px"> <select name="daoju" class="daoju"
+                                                                   style="border-color: transparent">
+                            <option value="daoju">使用道具</option>
+                            <option value="zhiding"><img src="image/stick.small.gif" alt=""/>置顶卡</option>
+                            <option value="zhiding"><img src="image/open.small.gif" alt=""/>喧嚣卡</option>
+                            <option value="zhiding"><img src="image/highlight.small.gif" alt=""/>变色卡</option>
+                            <option value="zhiding"><img src="image/jack.small.gif" alt=""/>千斤顶</option>
+                            <option value="zhiding"><img src="image/namepost.small.gif" alt=""/>显身卡</option>
+                        </select></span>
+                    <a href="" style="color: #333;margin-left: 10px">举报</a>
+                </p>
+            </div>
+            <div style="height: 36px;width: 757px;border-bottom: 1px dashed #CDCDCD;margin-right:20px;float: right;display: inline-block;">
+                <p style="line-height: 14px;margin-top: 10px">
+                    <img src="image/ico_lz (1).png" alt="" style="vertical-align: middle"/> 发表于 2015-10-22 18:22:24
+                    <span style="margin-left: 8px;color: #999">|</span>
+                    <a href="" style="color: #333;margin-left: 8px">只看该作者</a>
+                        <span style="margin-left: 380px;height: 28px;width: 38px;"
+                              class="lift">
+                            <a href="" style="color: #333;">报纸</a></span>
+                </p>
+            </div>
+            <div style="height: 159px;width: 757px;margin-right:20px;float: right;display: inline-block;border-bottom: 1px dashed #CDCDCD;">
+                <p style="font-size: 14px">顶一顶~希望大家多多支持~</p>
+            </div>
+            <div style="width: 800px;height: 35px;float: right;display: inline-block;border-bottom: 3px solid #C2D5E3;">
+                <p style="line-height: 36px"><a href="" style="color: #333;margin-left: 20px">
+                    <img src="image/ballon3.png" alt="" style="vertical-align: middle;margin-right: 4px"/>回复
+                    <img src="image/rec_add.gif" alt="" style="vertical-align: middle;margin-right: 4px"/>支持
+                    <img src="image/rec_subtract.gif" alt="" style="vertical-align: middle;margin-right: 4px"/>反对
+                        <span style="padding-left: 480px"> <select name="daoju" class="daoju"
+                                                                   style="border-color: transparent">
+                            <option value="daoju">使用道具</option>
+                            <option value="zhiding"><img src="image/stick.small.gif" alt=""/>置顶卡</option>
+                            <option value="zhiding"><img src="image/open.small.gif" alt=""/>喧嚣卡</option>
+                            <option value="zhiding"><img src="image/highlight.small.gif" alt=""/>变色卡</option>
+                            <option value="zhiding"><img src="image/jack.small.gif" alt=""/>千斤顶</option>
+                            <option value="zhiding"><img src="image/namepost.small.gif" alt=""/>显身卡</option>
+                        </select></span>
+                    <a href="" style="color: #333;margin-left: 10px">举报</a>
+                    </a>
+                </p>
+            </div>
+            <div style="height: 36px;width: 757px;border-bottom: 1px dashed #CDCDCD;margin-right:20px;float: right;display: inline-block;">
+                <p style="line-height: 14px;margin-top: 10px">
+                    <img src="image/ico_lz (1).png" alt="" style="vertical-align: middle"/> 发表于 2015-10-22 18:22:24
+                    <span style="margin-left: 8px;color: #999">|</span>
+                    <a href="" style="color: #333;margin-left: 8px">只看该作者</a>
+                        <span style="margin-left: 380px;height: 28px;width: 38px;"
+                              class="lift">
+                            <a href="" style="color: #333;">地板</a></span>
+                </p>
+            </div>
+            <div style="height: 159px;width: 757px;margin-right:20px;float: right;display: inline-block;border-bottom: 1px dashed #CDCDCD;">
+                <p style="font-size: 14px">希望大家多多支持我们，有任何需要咨询的，都可以加我们的QQ群询问哦~，谢谢</p>
+            </div>
+            <div style="width: 800px;height: 35px;float: right;display: inline-block;border-bottom: 3px solid #C2D5E3;">
+                <p style="line-height: 36px"><a href="" style="color: #333;margin-left: 20px">
+                    <img src="image/ballon3.png" alt="" style="vertical-align: middle;margin-right: 4px"/>回复</a>
+                    <img src="image/rec_add.gif" alt="" style="vertical-align: middle;margin-right: 4px"/>支持</a>
+                    <img src="image/rec_subtract.gif" alt="" style="vertical-align: middle;margin-right: 4px"/>反对</a>
+                        <span style="padding-left: 480px"> <select name="daoju" class="daoju"
+                                                                   style="border-color: transparent">
+                            <option value="daoju">使用道具</option>
+                            <option value="zhiding"><img src="image/stick.small.gif" alt=""/>置顶卡</option>
+                            <option value="zhiding"><img src="image/open.small.gif" alt=""/>喧嚣卡</option>
+                            <option value="zhiding"><img src="image/highlight.small.gif" alt=""/>变色卡</option>
+                            <option value="zhiding"><img src="image/jack.small.gif" alt=""/>千斤顶</option>
+                            <option value="zhiding"><img src="image/namepost.small.gif" alt=""/>显身卡</option>
+                        </select></span>
+                    <a href="" style="color: #333;margin-left: 10px">举报</a>
+                </p>
+            </div>
+            <div style="height: 36px;width: 757px;border-bottom: 1px dashed #CDCDCD;margin-right:20px;float: right;display: inline-block;">
+                <p style="line-height: 14px;margin-top: 10px">
+                    <img src="image/ico_lz (1).png" alt="" style="vertical-align: middle"/> 发表于 2015-10-22 18:22:24
+                    <span style="margin-left: 8px;color: #999">|</span>
+                    <a href="" style="color: #333;margin-left: 8px">只看该作者</a>
+                        <span style="margin-left: 380px;height: 28px;width: 38px;"
+                              class="lift">
+                            <a href="" style="color: #333;">7 <sup>#</sup></a></span>
+                </p>
+            </div>
+            <div style="height: 159px;width: 757px;margin-right:20px;float: right;display: inline-block;border-bottom: 1px dashed #CDCDCD;">
+                <p style="font-size: 14px">希望大家多多支持一下！谢谢了~
+                    <img src="image/victory.gif" alt=""/>
+                </p>
+            </div>
+            <div style="width: 800px;height: 35px;float: right;display: inline-block;border-bottom: 3px solid #C2D5E3;">
+                <p style="line-height: 36px"><a href="" style="color: #333;margin-left: 20px">
+                    <img src="image/ballon3.png" alt="" style="vertical-align: middle;margin-right: 4px"/>回复</a>
+                    <img src="image/rec_add.gif" alt="" style="vertical-align: middle;margin-right: 4px"/>支持</a>
+                    <img src="image/rec_subtract.gif" alt="" style="vertical-align: middle;margin-right: 4px"/>反对</a>
+                        <span style="padding-left: 480px"> <select name="daoju" class="daoju"
+                                                                   style="border-color: transparent">
+                            <option value="daoju">使用道具</option>
+                            <option value="zhiding"><img src="image/stick.small.gif" alt=""/>置顶卡</option>
+                            <option value="zhiding"><img src="image/open.small.gif" alt=""/>喧嚣卡</option>
+                            <option value="zhiding"><img src="image/highlight.small.gif" alt=""/>变色卡</option>
+                            <option value="zhiding"><img src="image/jack.small.gif" alt=""/>千斤顶</option>
+                            <option value="zhiding"><img src="image/namepost.small.gif" alt=""/>显身卡</option>
+                        </select></span>
+                    <a href="" style="color: #333;margin-left: 10px">举报</a>
+                </p>
+            </div>
+            <div style="height: 36px;width: 757px;border-bottom: 1px dashed #CDCDCD;margin-right:20px;float: right;display: inline-block;">
+                <p style="line-height: 14px;margin-top: 10px">
+                    <img src="image/ico_lz (1).png" alt="" style="vertical-align: middle"/> 发表于 2015-10-22 18:22:24
+                    <span style="margin-left: 8px;color: #999">|</span>
+                    <a href="" style="color: #333;margin-left: 8px">只看该作者</a>
+                        <span style="margin-left: 380px;height: 28px;width: 38px;"
+                              class="lift">
+                            <a href="" style="color: #333;">8 <sup>#</sup></a></span>
+                </p>
+            </div>
+            <div style="height: 159px;width: 757px;margin-right:20px;float: right;display: inline-block;border-bottom: 1px dashed #CDCDCD;">
+                <p style="font-size: 14px">求大家多支持啊~
+                    <img src="image/shy.gif" alt=""/>
+                </p>
+            </div>
+            <div style="width: 800px;height: 35px;float: right;display: inline-block;border-bottom: 3px solid #C2D5E3;">
+                <p style="line-height: 36px"><a href="" style="color: #333;margin-left: 20px">
+                    <img src="image/ballon3.png" alt="" style="vertical-align: middle;margin-right: 4px"/>回复</a>
+                    <img src="image/rec_add.gif" alt="" style="vertical-align: middle;margin-right: 4px"/>支持</a>
+                    <img src="image/rec_subtract.gif" alt="" style="vertical-align: middle;margin-right: 4px"/>反对</a>
+                        <span style="padding-left: 480px"> <select name="daoju" class="daoju"
+                                                                   style="border-color: transparent">
+                            <option value="daoju">使用道具</option>
+                            <option value="zhiding"><img src="image/stick.small.gif" alt=""/>置顶卡</option>
+                            <option value="zhiding"><img src="image/open.small.gif" alt=""/>喧嚣卡</option>
+                            <option value="zhiding"><img src="image/highlight.small.gif" alt=""/>变色卡</option>
+                            <option value="zhiding"><img src="image/jack.small.gif" alt=""/>千斤顶</option>
+                            <option value="zhiding"><img src="image/namepost.small.gif" alt=""/>显身卡</option>
+                        </select></span>
+                    <a href="" style="color: #333;margin-left: 10px">举报</a>
+                </p>
+            </div>
+            <div style="height: 36px;width: 757px;border-bottom: 1px dashed #CDCDCD;margin-right:20px;float: right;display: inline-block;">
+                <p style="line-height: 14px;margin-top: 10px">
+                    <img src="image/ico_lz (1).png" alt="" style="vertical-align: middle"/> 发表于 2015-10-22 18:22:24
+                    <span style="margin-left: 8px;color: #999">|</span>
+                    <a href="" style="color: #333;margin-left: 8px">只看该作者</a>
+                        <span style="margin-left: 380px;height: 28px;width: 38px;"
+                              class="lift">
+                            <a href="" style="color: #333;">10 <sup>#</sup></a></span>
+                </p>
+            </div>
+            <div style="height: 159px;width: 757px;margin-right:20px;float: right;display: inline-block;border-bottom: 1px dashed #CDCDCD;">
+                <p style="font-size: 14px">求大家多多支持啊~
+                    <img src="image/smile.gif" alt=""/>
+                </p>
+            </div>
+            <div style="width: 800px;height: 35px;float: right;display: inline-block;border-bottom: 3px solid #C2D5E3;">
+                <p style="line-height: 36px"><a href="" style="color: #333;margin-left: 20px">
+                    <img src="image/ballon3.png" alt="" style="vertical-align: middle;margin-right: 4px"/>回复</a>
+                    <img src="image/rec_add.gif" alt="" style="vertical-align: middle;margin-right: 4px"/>支持</a>
+                    <img src="image/rec_subtract.gif" alt="" style="vertical-align: middle;margin-right: 4px"/>反对</a>
+                        <span style="padding-left: 480px"> <select name="daoju" class="daoju"
+                                                                   style="border-color: transparent">
+                            <option value="daoju">使用道具</option>
+                            <option value="zhiding"><img src="image/stick.small.gif" alt=""/>置顶卡</option>
+                            <option value="zhiding"><img src="image/open.small.gif" alt=""/>喧嚣卡</option>
+                            <option value="zhiding"><img src="image/highlight.small.gif" alt=""/>变色卡</option>
+                            <option value="zhiding"><img src="image/jack.small.gif" alt=""/>千斤顶</option>
+                            <option value="zhiding"><img src="image/namepost.small.gif" alt=""/>显身卡</option>
+                        </select></span>
+                    <a href="" style="color: #333;margin-left: 10px">举报</a>
+                </p>
+            </div>
+        </div>
+        <div style="width: 960px;height: 29px;background-color: #FFFAF3;;border: 1px solid #CDCDCD;float: left;display: inline-block;">
+            <a href=""><p style="line-height: 31px;color:  #EFAA00;text-align: center">
+                还有一些帖子被系统自动隐藏，点击展开</p></a>
+        </div>
+        <div style="width: 960px;height: 33px;margin-bottom: 10px">
+        </div>
+        <div style="width: 563px;height: 33px;float: left;display: inline">
+            <img src="image/fatie.png" alt=""/>
+        </div>
+        <div style="height: 33px">
+            <div style="width: 397px;height: 28px;float: right;display: inline-block;margin-top: 5px;line-height: 33px">
+                <a href="" style="float: left;display: inline-block" class="nav1"> <img src="image/fanhuiliebiao.png"
+                                                                                        alt=""/></a>
+
+                <div style="height: 26px;width: 24px;border: 1px solid #CDCDCD;float: left;display: inline-block;margin-left: 4px;line-height: 26px;text-align: center"
+                     class="nav2">
+                    <a href="" style="font-weight: 400;color: #333;">1</a>
+                </div>
+                <div style="height: 26px;width: 24px;border: 1px solid #CDCDCD;float: left;display: inline-block;margin-left: 4px;line-height: 26px;text-align: center"
+                     class="nav3">
+                    <a href="" style="font-weight: 400;color: #333;">2</a>
+                </div>
+                <div style="height: 26px;width: 24px;border: 1px solid #CDCDCD;float: left;display: inline-block;margin-left: 4px;line-height: 26px;text-align: center"
+                     class="nav4">
+                    <a href="" style="font-weight: 400;color: #333;">3</a>
+                </div>
+                <div style="height: 26px;width: 24px;border: 1px solid #CDCDCD;float: left;display: inline-block;margin-left: 4px;line-height: 26px;text-align: center"
+                     class="nav5">
+                    <a href="" style="font-weight: 400;color: #333;">4</a>
+                </div>
+                <div style="height: 26px;width: 24px;border: 1px solid #CDCDCD;float: left;display: inline-block;margin-left: 4px;line-height: 26px;text-align: center"
+                     class="nav5">
+                    <a href="" style="font-weight: 400;color: #333;">5</a>
+                </div>
+                <div style="height: 26px;width: 79px;border: 1px solid #CDCDCD;float: left;display: inline-block;margin-left: 4px;line-height: 26px;text-align: center">
+                    <div style="height: 16px;width: 25px;border: 1px solid #CDCDCD;line-height: 16px;margin: 4px 6px;text-align: left;float: left;display: inline">
+                        1
+                    </div>
+                    <span style="float: right;display: inline;width: 25px;height: 16px;margin: 1px 6px"> /5页</span>
+                </div>
+                <div style="height: 28px;width: 73px;float: right;display: inline-block;margin-left: 4px;" class="nav6">
+                    <a href="" style="font-weight: 400;color: #333;">
+                        <img src="image/xiayiye.png" alt=""/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="height: 217px;width: 958px;float: left;display: inline-block;margin-top: 20px;border: 1px solid #CDCDCD;margin-bottom: 20px">
+            <div style="background-color: #C2D5E3;height: 217px;width: 160px;border-right: 1px solid #CDCDCD;float: left;display: inline-block"></div>
+            <div style="height: 136px;width: 587px;float: left;display: inline-block;margin-top: 30px;border: 1px solid #CDCDCD;margin-left: 20px">
+                <div style="height: 26px;width: 585px;background-color: #E8EFF5">
+                    <img src="image/kuaisufatie.png" alt="" style="float: left;display: inline"/>
+                    <a href="" style="color:#333;float: right;display: inline;margin: 4px"> 高级模式</a>
+                </div>
+                <div style="height:80px;width: 585px ">
+                    <p style="vertical-align: super;line-height: 24px;display: block;width: 577px;margin-top: 40px;margin-left: 40px">您需要登录后才可以发帖
+                        <a href="" style="color: #369">登录|</a>
+                        <a href="" style="color: #336699">立即注册</a>
+                        <img src="image/wechat.png" style="position: relative;top: 6px" alt=""/>
+                        <img src="image/qq.png" style="position: relative;top: 6px" alt=""/>
+                    </p>
+                </div>
+                <p style="height: 36px;width: 757px;margin-top: 0">
+                    <input type="button" value="发表回复" style="background-color: #06C;height: 26px;width: 70px"/>
+                     <label><input type="checkbox"/> <span class="page1">回帖后跳转到最后一页</span></label>
+                    <span> <a href="" style="color:#333;float: right">本版积分规则</a></span>
+                </p>
+            </div>
+        </div>
+        <hr style="width: 960px;margin: 20px auto;color: #CDCDCD"/>
+        <div style="width: 960px;height: 43px">
+            <p style="width: 960px;height: 21px;line-height: 21px">Powered by <a href="" style="color: #333;font-weight: 700">Discuz!</a> X3.2  <span style="position: relative;left: 180px">
+            <a href="" style="color: #333;">小黑屋</a>| <a href="" style="color: #333;">手机版</a> <a href="" style="color: #333;">Archiver</a>
+            <a href="" style="color: #333;font-weight: 700">Comsenz</a> ( <a href="" style="color: #333;"> 京ICP证110024号|京网文[2011]0019-007号|北京公安备案:1101082242</a>
+            )<img src="image/police2.png" alt="" style="vertical-align: top"/>
+        </span>
+            </p>
+            <p>© 2001-2013<a href="" style="color: #333;font-weight: 600"> Comsenz Inc.</a>
+                <span style="position: relative;left: 250px;color: #666">GMT+8, 2016-3-29 14:17 , Processed in 0.059868 second(s), 3 queries , Gzip On, Memcache On.</span>
+            </p>
+        </div>
+        </div>
+    </div>
+<a href="#top" style="position: fixed;right: 0;bottom: 0"> <img src="image/top.png" alt=""/></a>
+</body>
+</html>

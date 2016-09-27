@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/webpage.css" type="text/css">
+    <script type="text/javascript" src="../jquery-2.1.1/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#div2').on({
+                'mouseover':function(){
+                    $(this).find('ul').css('display','block')
+                },
+                'mouseleave':function(){
+                    $(this).find('ul').css('display','none')
+                }
+            });
+            $('#div5').on({
+                'mouseover':function(){
+                    $(this).find('ul').css('display','block')
+                },
+                'mouseleave':function(){
+                    $(this).find('ul').css('display','none')
+                }
+            });
+            $('#div6').on({
+                'mouseover':function(){
+                    $(this).find('ul').css('display','block')
+                },
+                'mouseleave':function(){
+                    $(this).find('ul').css('display','none')
+                }
+            });
+            $('#div8').on({
+                'mouseover':function(){
+                    $('#hidden').css('display','block')
+                },
+                'mouseleave':function(){
+                    $('#hidden').css('display','none')
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+<a name="top"></a>
+
+<div class="divtop">
+    <div class="divtitle"><a href="">设为首页</a> <a href="">收藏本站</a></div>
+</div>
+<div class="divbody">
+    <div class="divb1">
+        <div class="logo"><img src="image/discuz.png" alt="loading"/></div>
+        <div class="wx"><img src="image/wechat.png" alt=""/>
+
+            <p>扫一扫，访问微社区</p>
+        </div>
+        <div class="qq"><img src="image/qq.png" alt=""/>
+
+            <p>只需一步，快速开始</p>
+        </div>
+        <div class="login" style="border-right: 1px solid#CDCDCD">
+            <div style="margin-top: 2px"><label style="cursor: pointer">
+                用户名 <a href=""><img src="image/button.png"></a> <input type="text" name="name" size="20"
+                                                                       style="height: 20px"/>
+                <input type="checkbox" name="radio" value="button1" height="23" style="cursor: pointer"/>自动登录</label>
+            </div>
+            <div style="margin-top: 4px">
+                密码 <input type="password" name="password" size="20" style="height: 20px"/>
+                <button type="submit"
+                        style="width: 75px;height:23px;background-color: #E5E5E5;vertical-align: middle;border: 1px solid #999;cursor: pointer">
+                    <b>登录</b></button>
+            </div>
+        </div>
+        <div class="reset_password" style="float: right;margin-top: 26px">
+            <a style="cursor: pointer">找回密码</a>
+        </div>
+        <div class="reg" style="float: right;margin-top: 1px;color: #369">
+            <a style="cursor: pointer"><b>立即注册</b></a>
+        </div>
+    </div>
+    <div class="divb2">
+        <div class="div1" style="font-size: 14px"><a href="">论坛首页</a></div>
+        <div class="div2" id="div2" style="font-size: 14px"><a href="">文档资料</a>
+            <ul style="position: absolute;z-index: 9;display: none;height: 33px;width: 126px;list-style-type: none;text-align:inherit;">
+                <a href="" style=""><li class="li1">教程</li></a>
+                <a href=""><li class="li1">资料库</li></a>
+                <a href=""> <li class="li1">开发文档</li></a>
+            </ul>
+        </div>
+        <div class="div3"><a href="" style="font-size: 14px">腾讯云主机</a></div>
+        <div class="div4"><a href="" style="font-size: 14px">服务购买</a></div>
+        <div class="div5" id="div5"><a href="" style="font-size: 14px">微社区</a>
+            <ul style="position: absolute;z-index: 9;display: none;height: 33px;width: 126px;list-style-type: none;text-align:inherit;">
+                <a href="" style=""><li class="li1">Discuz!打通版</li></a>
+                <a href=""><li class="li1">标准版</li></a>
+                <a href=""> <li class="li1">本地化部署版</li></a>
+            </ul>
+        </div>
+        <div class="div6" id="div6"><a href="" style="font-size: 14px">应用中心</a>
+            <ul style="position: absolute;z-index: 9;display: none;height: 33px;width: 126px;list-style-type: none;text-align:inherit;">
+                <a href="" style=""><li class="li1">Discuz!应用中心</li></a>
+                <a href=""><li class="li1">Discuz！开放平台</li></a>
+            </ul>
+        </div>
+        <div class="div7"><a href="" style="font-size: 14px">在线体验</a></div>
+        <div class="div8" id="div8" ><a href="" style="font-size: 14px">快捷导航<img src="image/button2.png" alt="loading"/></a>
+            <div id="hidden" style="float: right;width: 620px;height: 88px;border: 1px solid #CDCDCD;background-color: white;border-top: none;">
+                <p style="text-align: center;margin-top: 30px"> 请<a href="" style="color:#369;">登录</a>后使用快捷导航</p>
+                <p style="text-align: center;">没有帐号?<a href="" style="color:#369;">立即注册</a></p>
+            </div>
+        </div>
+    </div>
+   <!-- <div id="hidden" style="float: right;width: 620px;height: 88px;border: 1px solid #CDCDCD;background-color: white;border-top: none;">
+        <p style="text-align: center;margin-top: 30px"> 请 <a href="" style="color:#369;">登录</a>后使用快捷导航</p>
+        <p style="text-align: center;">没有帐号?<a href="" style="color:#369;">立即注册</a></p>
+    </div>-->
+    <div style="height: 45px;width: 960px;background-color:#E8EFF5;">
+        <input type="text" name="text" style="height: 22px;width: 226px;margin-left: 21px;margin-top: 10px "
+               placeholder="请输入搜索内容"/>
+        <select name="webs" id="webs" style="height: 22px;width: 61px;margin-left: 0">
+            <option value="tiezi">帖子</option>
+            <option value="xiangche">相册</option>
+            <option value="yonghu">用户</option>
+        </select>
+
+        <div style="height: 45px;width: 632px ;float: right">
+            <img src="image/search.png" alt="" style="margin-top: 10px"/>
+
+            <div class="se" style="color: black">热搜：</div>
+            <div class="se">网页游戏</div>
+            <div class="se">婚纱</div>
+            <div class="se">推广</div>
+            <div class="se">聊天室</div>
+            <div class="se">游戏</div>
+            <div class="se">婚纱摄影</div>
+            <div class="se">积分商城</div>
+            <div class="se">搬家</div>
+            <div class="se">同城交友</div>
+            <div class="se">客户端</div>
+            <div class="se">旅游</div>
+            <div class="se">招聘</div>
+        </div>
+    </div>
+    <div style="height: 29px;width: 960px"><a href=""> <img src="image/webpage.png" alt=""/> </a>
+        <a href=""
+           style="margin: 0;padding: 0;color: #333;line-height: 29px;vertical-align: middle;position: relative;bottom: 10px">>论坛首页</a>
+    </div>
+ <!--     <div style="width: 960px;height: 33px;margin-bottom: 10px">
+   </div>-->
+    <div style="height: 18px;width: 960px">
+        <table>
+            <tr style="padding: 5px;margin: 6px">
+                <td><img src="image/signal.png" alt=""/></td>
+                <td style="border-right: 1px solid #CDCDCD;width: 70px;" align="center"><span>今日：</span><b>130</b></td>
+                <td style="border-right: 1px solid #CDCDCD;width: 70px;" align="center"><span>昨日: </span><b>331</b></td>
+                <td style="border-right: 1px solid #CDCDCD;width: 100px;" align="center"><span>帖子: </span>
+                    <b>17185035</b></td>
+                <td style="border-right: 1px solid #CDCDCD;width: 90px;" align="center"><span>会员</span> <b>2758433</b>
+                </td>
+                <td style="border-right: 1px solid #CDCDCD;width: 140px;" align="center"><span>欢迎新会员</span> <b>feilong259</b>
+                </td>
+                <td style="width: 490px;" align="right"><a href="" style="color: #369">最新回复</a></td>
+            </tr>
+        </table>
+    </div>
+    <div style="height: 460px;width: 960px;border: 1px solid #CDCDCD;margin-top: 4px">
+        <div style="height: 33px;width: 960px;background-color: #E8EFF5;border-bottom: 1px solid #CDCDCD;border-top: 1px solid #CDCDCD;line-height: 33px">
+            <a href="" style="color: #369;font-weight: bold;margin: 10px"> Comsenz 公司动态 </a>
+            <img src="image/zhedie.png" alt="" style="float: right;margin: 4px"/>
+        </div>
+        <div style="height: 74px;width: 960px;border-bottom: 1px solid #CDCDCD">
+            <div style="width: 50px;float: left">
+                <img src="image/ballon1.png" alt="" style="margin: 20px 10px;"/>
+            </div>
+            <div style="float: left;display: inline-block;margin-left: 10px">
+                <p style="margin-top: 10px"><a href="" style="color: red">Discuz! 程序发布 </a></p>
+
+                <p>第一时间提供 Discuz! 论坛最新程序、升级补丁、转换程序的免费下载，请随时关注新版本动态。</p>
+
+                <p style="margin-bottom: 10px"> 版主: <a href="" style="color: #369">Cnteacher</a></p>
+            </div>
+            <div style="width: 150px ;height: 74px;float: left;display: inline-block">
+                <table style="width: 150px;height: 14px;margin-top: 26px">
+                    <tr>
+                        <td style="line-height: 14px" align="right"><span style="color: #336699;">75</span><span
+                                style="color: #999">/ 2644</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="height: 74px;width: 200px;float: right;display: inline-block;">
+                <p style="margin-top: 18px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap" align="left"><a
+                        href="" style="color: #369">Discuz!NT 1.0测试版(ASP.NET) for
+                    Access 提供下载 </a></p>
+
+                <p style="margin-bottom: 18px" align="left">2016-3-15 12:58 <a href="" style="color:#336699;">雪人</a></p>
+            </div>
+        </div>
+        <div style="width: 960px ;height: 33px;background-color: #E8EFF5;border-bottom: 1px solid #CDCDCD;line-height: 33px">
+            <a href="" style="color: #369;font-weight: bold;margin: 10px"> Discuz! 交流与讨论</a>
+            <img src="image/zhedie.png" alt="" style="float: right;margin: 4px"/>
+        </div>
+        <div style="width: 940px;height: 74px;border-bottom: 1px dotted #CDCDCD;margin: 0 auto">
+            <div style="width: 50px;float: left">
+                <img src="image/ballon2.png" alt="" style="margin: 10px 0;"/>
+            </div>
+            <div style="float: left;display: inline-block">
+                <p style="margin-top: 10px"> <span> <a href="" style="font-weight: 700;color: #333">Discuz!-插件</a></span> <span style="font-weight: 400;color: #F26C4F">(9)</span></p>
+                <p>主题: 18万, 帖数: 267万</p>
+                <p> <span> <a href="" style="color: #369">酷易搜潘军新项目域名商上线</a></span> 24分钟前 <span> <a href="" style="color: #333">司诺</a></span></p>
+            </div>
+            <div style="width: 50px;float: left;display: inline-block">
+                <img src="image/ballon2.png" alt="" style="margin-top: 10px;margin-left: 186px"/>
+            </div>
+            <div style="float: right;display: inline-block;width: 419px">
+                <p style="margin-top: 10px"> <span> <a href=""style="font-weight: 700;color: #333">Discuz!-模板</a> </span> <span><a href="" style="color: #F26C4F;">(18)</a></span></p>
+                <p>主题: 15万, 帖数: 302万</p>
+                <p> <span><a href="" style="color: #369;margin-top: 18px;width: 190px">
+                    泡泡科技门户资讯模板，蓝色... </a>半小时前 </span> <span><a href="" style="color: #333">689689</a></span></p>
+            </div>
+        </div>
+        <div style="width: 940px;height: 74px;border-bottom: 1px dotted #CDCDCD;margin: 0 auto">
+            <div style="width: 50px;float: left">
+                <img src="image/ballon2.png" alt="" style="margin: 10px 0;"/>
+            </div>
+            <div style="float: left;display: inline-block">
+                <p style="margin-top: 10px"> <span> <a href="" style="font-weight: 700;color: #333">Discuz!-应用中心</a></span> <span style="font-weight: 400;color: #F26C4F">(1)</span></p>
+                <p>主题: 624, 帖数: 3143</p>
+                <p> <span> <a href="" style="color: #369">我这个能不能做插件</a></span> 24分钟前 <span> <a href="" style="color: #333">科豪思</a></span></p>
+            </div>
+            <div style="width: 50px;float: left;display: inline-block">
+                <img src="image/ballon1.png" alt="" style="margin-top: 10px;margin-left: 222px"/>
+            </div>
+            <div style="float: right;display: inline-block;width: 419px">
+                <p style="margin-top: 10px"> <span> <a href=""style="font-weight: 700;color: #333">Discuz!-开发者交流</a> </span> <span><a href="" style="color: #333"></a></span></p>
+                <p>主题: 289, 帖数: 1544</p>
+                <p>私密板块</p>
+            </div>
+        </div>
+        <div style="width: 940px;height: 74px;margin: 0 auto">
+            <div style="width: 50px;float: left">
+                <img src="image/ballon2.png" alt="" style="margin: 10px 0;"/>
+            </div>
+            <div style="float: left;display: inline-block">
+                <p style="margin-top: 10px"> <span> <a href="" style="font-weight: 700;color: blue">Discuz!-安装使用</a></span> <span style="font-weight: 400;color: #F26C4F">(109)</span></p>
+                <p>主题: 92万, 帖数: 726万</p>
+                <p> <span> <a href="" style="color: #369">DZ X3.2 发表的帖子不能分享到QQ ... </a></span> 15秒前 <span> <a href="" style="color: #333"> tvtvtv52</a></span></p>
+            </div>
+            <div style="width: 50px;float: left;display: inline-block">
+                <img src="image/ballon1.png" alt="" style="margin-top: 10px;margin-left: 132px"/>
+            </div>
+            <div style="float: right;display: inline-block;width: 419px">
+                <p style="margin-top: 10px"> <span> <a href=""style="font-weight: 700;color: #333">Discuz!-BUG反馈</a> </span> <span><a href="" style="color: #F26C4F;">(3)</a></span></p>
+                <p>主题: 6万, 帖数: 28万</p>
+                <p> <span><a href="" style="color: #369;margin-top: 18px;width: 190px">
+                    打通版微社区异常，出现了三个ID ...</a>2小时前 </span> <span><a href="" style="color: #333">天狼晓月</a></span></p>
+            </div>
+        </div>
+        <div style="width: 960px ;height: 33px;background-color: #E8EFF5;border-bottom: 1px solid #CDCDCD;line-height: 33px;border-top: 1px solid #CDCDCD;line-height: 33px">
+            <a href="" style="color: #369;font-weight: bold;margin: 10px"> Discuz! 交流与讨论</a>
+            <img src="image/zhedie.png" alt="" style="float: right;margin: 4px"/>
+        </div>
+        <div style="width: 31px;margin: 10px;float: left;display: inline">
+            <img src="image/ballon1.png" alt=""/>
+        </div>
+        <div style="width: 180px;margin: 10px 8px;float: left;display: inline">
+            <p ><a href="" style="color: #333;font-weight: 700">专用主机业务</a></p>
+            <p>私密板块</p>
+        </div>
+        <div style="width: 31px;margin: 10px;float: left;display: inline">
+            <img src="image/ballon1.png" alt=""/>
+        </div>
+        <div style="width: 180px;margin: 10px 8px;float: left;display: inline">
+            <p><a href=""style="color: #333;font-weight: 700">PHP技术讨论版</a></p>
+            <p><a href="" style="color:#369;">链接到外部地址</a></p>
+        </div>
+        <div style="width: 31px;margin: 10px;float: left;display: inline">
+            <img src="image/ballon1.png" alt=""/>
+        </div>
+        <div style="width: 180px;margin: 10px 8px;float: left;display: inline">
+            <p><a href="" style="color: #333;font-weight: 700">ECShop 交流与讨论</a></p>
+            <p><a href="" style="color:#369;">链接到外部地址</a></p>
+        </div>
+        <div style="width: 31px;margin: 10px;float: left;display: inline">
+            <img src="image/ballon1.png" alt=""/>
+        </div>
+        <div style="width: 150px;margin: 10px 8px;float: right;display: inline">
+            <p><a href="" style="color: #333;font-weight: 700">Discuz! 腾讯云</a></p>
+            <p><a href="" style="color:#369;">链接到外部地址</a></p>
+        </div>
+    </div>
+    <div style="height: 33px;width: 960px;background-color: #E8EFF5;border:1px solid #CDCDCD;line-height: 33px;margin-top: 8px">
+        <p style="margin-left: 10px;display: inline">在线会员 - 总计 15672 人在线 - 最高记录是 14160223 于 2012-2-29.</p>
+        <img src="image/zhedie2.png" alt="" style="float: right;margin: 8px;"/>
+    </div>
+    <div style="height: 340px;width: 960px;border:1px solid #CDCDCD;line-height: 33px;margin-top: 8px">
+        <div style="width: 940px;height: 51px;border-bottom: 1px dotted #CDCDCD;margin: 0 auto">
+            <div style="width: 88px;height:51px;float: left">
+                <img src="image/logo_88_31.gif" alt="" style="margin-top: 10px"/>
+            </div>
+            <div style="width: 158px;height: 51px;display: inline-block;margin-left: 4px;">
+                <p style="line-height: 18px;margin-top: 6px"><a href="" style="color: #333;font-weight: 600">Discuz!产品</a></p>
+                <p style="color:#666;line-height: 18px;">Discuz! 官方网站 用户会员区</p>
+            </div>
+        </div>
+        <div style="width: 940px;height: 51px;border-bottom: 1px dotted #CDCDCD;margin: 0 auto">
+                <div style="width: 88px;height: 51px;float: left;margin-left: 4px">
+                    <img src="image/logo2.gif" alt="" style="margin-top: 10px;"/>
+                </div>
+            <div style="width: 158px;height: 51px;display: inline-block;margin-left: 4px;">
+                <p style="line-height: 18px;margin-top: 6px"><a href="" style="color: #333;font-weight: 600">虚拟主机</a></p>
+                <p style="color:#666;line-height: 18px;">Discuz!专用主机服务</p>
+            </div>
+        </div>
+        <div style="width: 940px;height: 60px;">
+            <img src="image/tencent.png" alt="" style="margin: 10px"/>
+        </div>
+        <div style="height: 146px;width: 940px;margin: 0 auto">
+            <table style="margin: 10px">
+                <tr>
+                    <td><a href="">手机QQ浏览器</a></td>
+                    <td><a href="">腾讯开放论坛</a></td>
+                    <td><a href="">电脑管家论坛</a></td>
+                    <td><a href="">云服务器</a></td>
+                    <td><a href="">PHPchina</a></td>
+                    <td><a href="">蓝色理想</a></td>
+                    <td><a href="">电脑报论坛</a></td>
+                    <td><a href="">ChinaUnix</a></td>
+                    <td><a href="">落伍者论坛</a></td>
+                    <td><a href="">IT之家</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">好大夫</a></td>
+                    <td><a href="">站长工具</a></td>
+                    <td><a href="">中国网管联盟</a></td>
+                    <td><a href="">中国站长</a></td>
+                    <td><a href="">Web开发网</a></td>
+                    <td><a href="">站长中国</a></td>
+                    <td><a href="">嬴政天下</a></td>
+                    <td><a href="">WooYun</a></td>
+                    <td><a href="">中国站长之家</a></td>
+                    <td><a href="">网页教学网</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">域名网</a></td>
+                    <td><a href="">A5论坛</a></td>
+                    <td><a href="">28推论坛</a></td>
+                    <td><a href="">ShopNC多店商</a></td>
+                    <td><a href="">游侠网</a></td>
+                    <td><a href="">DNSPod</a></td>
+                    <td><a href="">挖贝网</a></td>
+                    <td><a href="">奇米网</a></td>
+                    <td><a href="">小鸟云</a></td>
+                    <td><a href="">cc视频</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">互动中国</a></td>
+                    <td><a href="">军转网</a></td>
+                    <td><a href="">游久论坛</a></td>
+                    <td><a href="">礼品</a></td>
+                    <td><a href="">盱眙网</a></td>
+                    <td><a href="">智能电视网</a></td>
+                    <td><a href="">A9VG电玩部落</a></td>
+                    <td><a href="">0668论坛</a></td>
+                    <td><a href="">盆景</a></td>
+                    <td><a href="">手游部落</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">玩家网</a></td>
+                    <td><a href="">推一把</a></td>
+                    <td><a href="">郑州论坛</a></td>
+                    <td><a href="">新东方社区</a></td>
+                    <td><a href="">安卓网</a></td>
+                    <td><a href="">91手机娱乐门户</a></td>
+                    <td><a href="">华声论坛</a></td>
+                    <td><a href="">站帮网</a></td>
+                    <td><a href="">太仓论坛</a></td>
+                    <td><a href="">爱换</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">泰安论坛</a></td>
+                    <td><a href="">编织人生</a></td>
+                    <td><a href="">糖护士</a></td>
+                    <td><a href="">高效养殖网</a></td>
+                    <td><a href="">章丘人论坛</a></td>
+                    <td><a href="">微信企业号</a></td>
+                    <td><a href="">滴答留学移民</a></td>
+                    <td><a href="">上海滩</a></td>
+                    <td><a href="">木蚂蚁安卓论坛</a></td>
+                    <td><a href="">酷爱论坛</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">肥东论坛</a></td>
+                    <td><a href="">选学网</a></td>
+                    <td><a href="">PHP100</a></td>
+                    <td><a href="">站长论坛</a></td>
+                    <td><a href="">站长教程</a></td>
+                    <td><a href="">好贷网</a></td>
+                    <td><a href="">17173游戏论坛</a></td>
+                    <td><a href="">星乐点网络</a></td>
+                    <td><a href="">DiscuzFans</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <hr style="width: 960px;margin: 10px auto;color: #CDCDCD"/>
+    <div style="width: 960px;height: 43px">
+        <p style="width: 960px;height: 21px;line-height: 21px">Powered by <a href="" style="color: #333;font-weight: 700">Discuz!</a> X3.2  <span style="position: relative;left: 180px">
+            <a href="" style="color: #333;">小黑屋</a>| <a href="" style="color: #333;">手机版</a> <a href="" style="color: #333;">Archiver</a>
+            <a href="" style="color: #333;font-weight: 700">Comsenz</a> ( <a href="" style="color: #333;"> 京ICP证110024号|京网文[2011]0019-007号|北京公安备案:1101082242</a>
+            )<img src="image/police2.png" alt="" style="vertical-align: top"/>
+        </span>
+        </p>
+        <p>© 2001-2013<a href="" style="color: #333;font-weight: 600"> Comsenz Inc.</a>
+            <span style="position: relative;left: 250px;color: #666">GMT+8, 2016-3-29 14:17 , Processed in 0.059868 second(s), 3 queries , Gzip On, Memcache On.</span>
+        </p>
+    </div>
+</div>
+<a href="#top" style="position: fixed;right: 0;bottom: 0"> <img src="image/top.png" alt=""/></a>
+</body>
+</html>
